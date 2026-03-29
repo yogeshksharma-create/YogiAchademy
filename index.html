@@ -160,6 +160,7 @@
   <div style="margin-top:20px;">
     <button class="btn" onclick="goTo('kids')">Kids Learning</button>
     <button class="btn" onclick="goTo('usmle')">USMLE Prep</button>
+    <button class="btn" onclick="goTo('MCAT')">MCAT Prep</button>
   </div>
 </section>
 
@@ -174,9 +175,9 @@
       <p style="color:green;">Available</p>
     </div>
 
-    <div class="card coming" onclick="comingSoon()">
+    <div class="card coming" onclick="goTo('MCAT')">
       <h3>MCAT</h3>
-      <p>Coming Soon</p>
+      <p style="color:green;">Available</p>
     </div>
 
     <div class="card coming" onclick="comingSoon()">
@@ -195,7 +196,7 @@
     </div>
 
     <div class="card coming" onclick="comingSoon()">
-      <h3>PMT</h3>
+      <h3>NEET</h3>
       <p>Coming Soon</p>
     </div>
 
@@ -229,6 +230,9 @@
       window.location.href = "https://usmle.learnatopia.com";
     } else if (type === "kids") {
       window.location.href = "https://kids.learnatopia.com";
+    }
+    else if (type === "MCAT") {
+      window.location.href = "https://mcat.learnatopia.com";
     }
   }
 
