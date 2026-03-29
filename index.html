@@ -160,7 +160,7 @@
   <div style="margin-top:20px;">
     <button class="btn" onclick="goTo('kids')">Kids Learning</button>
     <button class="btn" onclick="goTo('usmle')">USMLE Prep</button>
-    <button class="btn" onclick="goTo('College Entrance Prep')">CEP Prep</button>
+    <button class="btn" onclick="goTo('cep')">CEP Prep</button>
   </div>
 </section>
 
@@ -175,7 +175,7 @@
       <p style="color:green;">Available</p>
     </div>
 
-    <div class="card active" onclick="goTo('College Entrance Prep')">
+    <div class="card active" onclick="goTo('cep')">
       <h3>College Entrance Prep</h3>
       <p style="color:green;">Available</p>
     </div>
@@ -217,7 +217,7 @@
     } else if (type === "kids") {
       window.location.href = "https://kids.learnatopia.com";
     }
-    else if (type === "College Entrance Prep") {
+    else if (type === "cep") {
       window.location.href = "https://mcat.learnatopia.com";
     }
   }
