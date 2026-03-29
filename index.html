@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learnatopia</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #333;
+    }
+
+    header {
+      background: #1e293b;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #4f46e5, #6366f1);
+      color: white;
+    }
+
+    .hero img {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      margin: 5px;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #4f46e5;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .active {
+      border-left: 5px solid green;
+    }
+
+    .coming {
+      background: #e5e7eb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e293b;
+      color: white;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 300px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div><strong>Learnatopia</strong></div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="BrainQuest1_logo.png" alt="Learnatopia Logo">
+
+  <h1>Learn Smarter. Perform Better.</h1>
+  <p>AI-powered adaptive learning for exams and kids education</p>
+
+  <button class="btn btn-primary">Start Learning</button>
+  <button class="btn btn-secondary">Explore Exams</button>
+
+  <div style="margin-top:20px;">
+    <button class="btn" onclick="goTo('kids')">Kids Learning</button>
+    <button class="btn" onclick="goTo('usmle')">USMLE Prep</button>
+  </div>
+</section>
+
+<!-- EXAMS -->
+<section class="section">
+  <h2>Choose Your Exam</h2>
+
+  <div class="grid">
+
+    <div class="card active" onclick="goTo('usmle')">
+      <h3>USMLE Step 1 & 2</h3>
+      <p style="color:green;">Available</p>
+    </div>
+
+    <div class="card coming" onclick="comingSoon()">
+      <h3>MCAT</h3>
+      <p>Coming Soon</p>
+    </div>
+
+    <div class="card coming" onclick="comingSoon()">
+      <h3>GRE</h3>
+      <p>Coming Soon</p>
+    </div>
+
+    <div class="card coming" onclick="comingSoon()">
+      <h3>GMAT</h3>
+      <p>Coming Soon</p>
+    </div>
+
+    <div class="card coming" onclick="comingSoon()">
+      <h3>IIT-JEE</h3>
+      <p>Coming Soon</p>
+    </div>
+
+    <div class="card coming" onclick="comingSoon()">
+      <h3>PMT</h3>
+      <p>Coming Soon</p>
+    </div>
+
+    <div class="card coming" onclick="comingSoon()">
+      <h3>EET</h3>
+      <p>Coming Soon</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Learnatopia</p>
+  <p>Personalized Learning. Real Results.</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3>Coming Soon 🚧</h3>
+    <p>This section is under development.</p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+  function goTo(type) {
+    if (type === "usmle") {
+      window.location.href = "https://usmle.learnatopia.com";
+    } else if (type === "kids") {
+      window.location.href = "https://kids.learnatopia.com";
+    }
+  }
+
+  function comingSoon() {
+    document.getElementById("modal").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
