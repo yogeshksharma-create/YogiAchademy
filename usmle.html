@@ -47,7 +47,7 @@
 
     .hero img {
       width: 120px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
@@ -82,6 +82,21 @@
       background: transparent;
       border: 2px solid white;
       color: white;
+    }
+
+    .rating-stars {
+      display: inline-flex;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .rating-stars .star {
+      font-size: 28px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #cbd5e1;
+      transition: color 0.2s ease;
     }
 
     .section {
@@ -133,7 +148,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img src="usmlemastery.png" alt="usmle-mastery Logo">
+  <img src="BrainQuest1_logo.png" alt="Learnatopia Logo">
 
   <h1>Master the USMLE</h1>
   <p>AI-powered adaptive learning for medical exam preparation</p>
@@ -185,18 +200,113 @@
       <h3>USMLE Step 2 CK</h3>
       <p>Clinical knowledge assessment with patient-centered scenarios and clinical decision making.</p>
     </div>
+
+    <div class="card">
+      <h3>USMLE Step 3</h3>
+      <p>Clinical skills and patient management in ambulatory and hospital settings.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEW -->
+<section class="section" id="reviews">
+  <h2>Leave a Review</h2>
+  <div class="card" style="max-width: 800px; margin: auto;">
+    <p>Share your experience and help other learners choose the best USMLE prep plan.</p>
+    <div class="rating-stars" id="ratingStars" aria-label="Star rating">
+      <button type="button" class="star" data-value="1" aria-label="1 star">★</button>
+      <button type="button" class="star" data-value="2" aria-label="2 stars">★</button>
+      <button type="button" class="star" data-value="3" aria-label="3 stars">★</button>
+      <button type="button" class="star" data-value="4" aria-label="4 stars">★</button>
+      <button type="button" class="star" data-value="5" aria-label="5 stars">★</button>
+    </div>
+    <textarea id="reviewText" rows="4" placeholder="Write your review here..." style="width:100%; margin-top:15px; padding:15px; border:1px solid #d1d5db; border-radius:10px; resize: vertical;"></textarea>
+    <button class="btn btn-primary" id="submitReview" style="margin-top:15px;">Submit Review</button>
+    <p id="reviewMessage" style="margin-top:12px; color:#16a34a; display:none;"></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="grid" style="grid-template-columns: 1fr;">
+    <div class="card">
+      <h3>How do I subscribe or upgrade my plan?</h3>
+      <p>Subscriptions are managed on our website at usmle.learnatopia.com. Sign in and navigate to the Pricing section to choose or upgrade your plan.</p>
+    </div>
+    <div class="card">
+      <h3>Can I access the app on multiple devices?</h3>
+      <p>Yes. Your account can be used on any device. Simply log in with your registered email and your progress will sync automatically.</p>
+    </div>
+    <div class="card">
+      <h3>How do I cancel my subscription?</h3>
+      <p>You can cancel anytime via the Pricing page (on web) or by visiting usmle.learnatopia.com. Cancellation takes effect at the end of the current billing period.</p>
+    </div>
+    <div class="card">
+      <h3>What happens to my data if I delete my account?</h3>
+      <p>All your data — including progress, bookmarks, and flashcards — will be permanently deleted within 7 days of your request and cannot be recovered.</p>
+    </div>
+    <div class="card">
+      <h3>Are the questions written by medical professionals?</h3>
+      <p>Our question bank is developed and reviewed with medical education standards in mind. AI-generated questions are clearly labeled and reviewed for accuracy.</p>
+    </div>
+    <div class="card">
+      <h3>How do I reset my progress?</h3>
+      <p>You can clear individual session history from the Analytics page. For a full reset, contact our support team.</p>
+    </div>
   </div>
 </section>
 
 <footer>
   <p>&copy; 2026 Learnatopia. All rights reserved.</p>
+  
    <div style="text-align:center;margin-top:20px;">
     <a href="https://www.facebook.com/profile.php?id=61589042827976" target="_blank" 
        style="text-decoration:none;color:#4f46e5;font-weight:bold;">
         <i class="fab fa-facebook"></i> Follow USMLE Learnatopia on Facebook
     </a>
-</div>
+    </div>
 </footer>
+
+<script>
+  const stars = document.querySelectorAll('.rating-stars .star');
+  const reviewMessage = document.getElementById('reviewMessage');
+  let selectedRating = 0;
+
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      selectedRating = Number(star.dataset.value);
+      stars.forEach(s => {
+        s.style.color = Number(s.dataset.value) <= selectedRating ? '#f59e0b' : '#cbd5e1';
+      });
+    });
+  });
+
+  document.getElementById('submitReview').addEventListener('click', () => {
+    const reviewText = document.getElementById('reviewText').value.trim();
+
+    if (!selectedRating) {
+      reviewMessage.style.display = 'block';
+      reviewMessage.style.color = '#dc2626';
+      reviewMessage.textContent = 'Please select a star rating before submitting your review.';
+      return;
+    }
+
+    if (!reviewText) {
+      reviewMessage.style.display = 'block';
+      reviewMessage.style.color = '#dc2626';
+      reviewMessage.textContent = 'Please add a short review message.';
+      return;
+    }
+
+    reviewMessage.style.display = 'block';
+    reviewMessage.style.color = '#16a34a';
+    reviewMessage.textContent = `Thanks for your review! You rated us ${selectedRating} star${selectedRating > 1 ? 's' : ''}.`;
+    document.getElementById('reviewText').value = '';
+    selectedRating = 0;
+    stars.forEach(s => s.style.color = '#cbd5e1');
+  });
+</script>
 
 </body>
 </html>
