@@ -10,7 +10,7 @@
   <meta property="og:image" content="https://learnatopia.com/BrainQuest1_logo.png">
   <meta property="og:url" content="https://learnatopia.com/usmle.html">
   <title>USMLE Mastery | Learnatopia</title>
-  <link rel="icon" href="usmlemastery.png" type="image/png">
+  <link rel="icon" href="BrainQuest1_logo.png" type="image/png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -118,10 +118,24 @@
       cursor: pointer;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: 0.2s;
+      box-sizing: border-box;
     }
 
     .card:hover {
       transform: translateY(-5px);
+    }
+
+    .review-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-left: 4px solid #f59e0b;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      box-sizing: border-box;
     }
 
     footer {
@@ -148,7 +162,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img src="usmlemastery.png" alt="USMLE Learnatopia Logo">
+  <img src="usmlemastery.png" alt="USMLE Mastery Logo">
 
   <h1>Master the USMLE</h1>
   <p>AI-powered adaptive learning for medical exam preparation</p>
@@ -200,13 +214,12 @@
       <h3>USMLE Step 2 CK</h3>
       <p>Clinical knowledge assessment with patient-centered scenarios and clinical decision making.</p>
     </div>
-  </div>
 </section>
 
 <!-- REVIEW -->
 <section class="section" id="reviews">
   <h2>Leave a Review</h2>
-  <div class="card" style="max-width: 800px; margin: auto;">
+  <div class="card" style="max-width: 800px; margin: 0 auto; box-sizing: border-box;">
     <p>Share your experience and help other learners choose the best USMLE prep plan.</p>
     <div class="rating-stars" id="ratingStars" aria-label="Star rating">
       <button type="button" class="star" data-value="1" aria-label="1 star">★</button>
@@ -218,6 +231,35 @@
     <textarea id="reviewText" rows="4" placeholder="Write your review here..." style="width:100%; margin-top:15px; padding:15px; border:1px solid #d1d5db; border-radius:10px; resize: vertical;"></textarea>
     <button class="btn btn-primary" id="submitReview" style="margin-top:15px;">Submit Review</button>
     <p id="reviewMessage" style="margin-top:12px; color:#16a34a; display:none;"></p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials">
+  <h2>Top Reviews from Our Students</h2>
+  <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 1000px; margin: 0 auto;">
+    
+    <div class="review-card">
+      <div style="color: #f59e0b; font-size: 18px; margin-bottom: 10px;">★★★★★</div>
+      <p style="font-style: italic; margin: 0 0 15px 0;">"This platform completely transformed my USMLE Step 1 preparation. The AI-powered adaptive learning helped me identify weak areas and the doctor-created content is incredibly high-yield. I scored 265!"</p>
+      <p style="margin: 0; font-weight: 600; color: #1e293b;">- Sarah M., Medical Student</p>
+    </div>
+
+    <div class="review-card">
+      <div style="color: #f59e0b; font-size: 18px; margin-bottom: 10px;">★★★★★</div>
+      <p style="font-style: italic; margin: 0 0 15px 0;">"The practice questions are exactly like the real USMLE format. The detailed explanations saved me so much time studying and helped me understand concepts deeply rather than just memorizing."</p>
+      <p style="margin: 0; font-weight: 600; color: #1e293b;">- Dr. Ahmed K., Resident</p>
+    </div>
+
+    <div class="review-card">
+      <div style="color: #f59e0b; font-size: 18px; margin-bottom: 10px;">★★★★★</div>
+      <p style="font-style: italic; margin: 0 0 15px 0;">"Outstanding resource for USMLE prep! The step-by-step approach and personalized learning path made studying so much more efficient. Highly recommend to anyone preparing for the exam!"</p>
+      <p style="margin: 0; font-weight: 600; color: #1e293b;">- Jessica T., USMLE Passer</p>
+    </div>
+
+  </div>
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="/testimonials.html" class="btn btn-primary">Read All Reviews & Testimonials</a>
   </div>
 </section>
 
