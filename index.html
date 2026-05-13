@@ -153,10 +153,10 @@
 <header>
   <div><strong>Learnatopia</strong></div>
   <nav>
-    <a href="#">Home</a>
     <a href="/about.html">About Us</a>
     <a href="/contact.html">Contact</a>
     <a href="/usmle.html">USMLE</a>
+     <a href="neet.html">NEET-Prep</a>
   </nav>
 </header>
 
@@ -173,7 +173,7 @@
   <div style="display:flex; gap:15px; flex-wrap:wrap; justify-content:center;">
     <button class="btn" onclick="goTo('kids')">Kids Learning</button>
     <button class="btn" onclick="goTo('usmle')">USMLE Prep</button>
-    <button class="btn" onclick="goTo('cep')">CEP Prep</button>
+    <button class="btn" onclick="goTo('neet')">NEET Prep</button>
   </div>
 
   <!-- Apple Button (White Styled Container) -->
@@ -206,9 +206,9 @@
       <p style="color:#10b981; font-weight:600;">Available</p>
     </div>
 
-    <div class="card active" onclick="goTo('cep')">
+    <div class="card active" onclick="goTo('neet')">
       <i class="fas fa-graduation-cap"></i>
-      <h3>College Entrance Prep</h3>
+      <h3>NEET-Prep</h3>
       <p style="color:#10b981; font-weight:600;">Available</p>
     </div>
 
@@ -257,8 +257,8 @@
     } else if (type === "kids") {
       window.location.href = "https://kids.learnatopia.com";
     }
-    else if (type === "cep") {
-      window.location.href = "https://edu.learnatopia.com";
+    else if (type === "neet") {
+      window.location.href = "/neet.html";
     }
     else if (type === "company") {
       window.location.href = "https://ysharmamdinc.learnatopia.com";
