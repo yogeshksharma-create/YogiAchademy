@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEET Prime - AI Powered NEET-UG Preparation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#f8fafc;
+      color:#111827;
+      line-height:1.6;
+    }
+
+    .hero{
+      min-height:100vh;
+      background:linear-gradient(135deg,#0f172a,#1e3a8a,#10b981);
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:60px 20px;
+    }
+
+    .hero-content{
+      max-width:900px;
+    }
+
+    .badge{
+      display:inline-block;
+      background:rgba(255,255,255,0.15);
+      padding:10px 18px;
+      border-radius:999px;
+      font-size:14px;
+      margin-bottom:20px;
+      backdrop-filter:blur(10px);
+    }
+
+    h1{
+      font-size:56px;
+      line-height:1.1;
+      margin-bottom:20px;
+      font-weight:700;
+    }
+
+    .highlight{
+      color:#86efac;
+    }
+
+    .hero p{
+      font-size:20px;
+      opacity:0.95;
+      margin-bottom:35px;
+    }
+
+    .cta-buttons{
+      display:flex;
+      gap:16px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      text-decoration:none;
+      padding:16px 28px;
+      border-radius:14px;
+      font-weight:600;
+      transition:0.3s ease;
+      display:inline-block;
+    }
+
+    .btn-primary{
+      background:white;
+      color:#0f172a;
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-3px);
+    }
+
+    .btn-outline{
+      border:2px solid rgba(255,255,255,0.4);
+      color:white;
+    }
+
+    .btn-outline:hover{
+      background:rgba(255,255,255,0.1);
+    }
+
+    section{
+      padding:80px 20px;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:40px;
+      margin-bottom:12px;
+      color:#0f172a;
+    }
+
+    .section-title p{
+      color:#64748b;
+      font-size:18px;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:22px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      transition:0.3s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+    }
+
+    .icon{
+      font-size:42px;
+      margin-bottom:18px;
+    }
+
+    .card h3{
+      margin-bottom:14px;
+      font-size:22px;
+      color:#0f172a;
+    }
+
+    .card p{
+      color:#475569;
+      font-size:15px;
+    }
+
+    .stats{
+      background:#0f172a;
+      color:white;
+      border-radius:30px;
+      padding:60px 30px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:30px;
+      text-align:center;
+    }
+
+    .stat h3{
+      font-size:42px;
+      color:#86efac;
+    }
+
+    .stat p{
+      opacity:0.9;
+    }
+
+    .cta-section{
+      text-align:center;
+      background:linear-gradient(135deg,#10b981,#059669);
+      color:white;
+      border-radius:32px;
+      padding:70px 20px;
+    }
+
+    .cta-section h2{
+      font-size:42px;
+      margin-bottom:18px;
+    }
+
+    .cta-section p{
+      max-width:700px;
+      margin:auto;
+      margin-bottom:30px;
+      font-size:18px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#64748b;
+      font-size:14px;
+    }
+
+    @media(max-width:768px){
+      h1{
+        font-size:40px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .section-title h2{
+        font-size:32px;
+      }
+
+      .cta-section h2{
+        font-size:32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge">
+        🚀 AI-Powered NEET-UG Preparation Platform
+      </div>
+
+      <h1>
+        Crack NEET-UG with <span class="highlight">NEET Prime</span>
+      </h1>
+
+      <p>
+        Your AI-powered adaptive companion for mastering the NEET-UG entrance exam with personalized study plans, instant AI doubt resolution, and high-yield mock tests.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="https://neetprep.learnatopia.com" class="btn btn-primary">
+          Start Learning
+        </a>
+
+        <a href="#features" class="btn btn-outline">
+          Explore Features
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Why Students Love NEET Prime</h2>
+        <p>
+          Smart learning tools built specifically for NEET-UG aspirants.
+        </p>
+      </div>
+
+      <div class="features">
+
+        <div class="card">
+          <div class="icon">🤖</div>
+          <h3>AI Study Plans</h3>
+          <p>
+            Get personalized daily study schedules based on your strengths, weak areas, and exam goals.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🧠</div>
+          <h3>Instant Doubt Solving</h3>
+          <p>
+            Ask doubts anytime and receive instant AI-powered explanations for Physics, Chemistry, and Biology.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📝</div>
+          <h3>High-Yield Mock Tests</h3>
+          <p>
+            Practice with NEET-pattern mock exams, topic-wise quizzes, and previous year questions.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📊</div>
+          <h3>Performance Analytics</h3>
+          <p>
+            Track accuracy, speed, weak topics, and rank predictions with smart analytics dashboards.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🔁</div>
+          <h3>Adaptive Revision</h3>
+          <p>
+            AI automatically schedules revision sessions using spaced repetition for maximum retention.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎯</div>
+          <h3>Exam-Focused Learning</h3>
+          <p>
+            Learn smarter with NCERT-focused concepts, shortcut techniques, and strategic practice.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section>
+    <div class="container">
+      <div class="stats">
+
+        <div class="stat">
+          <h3>24/7</h3>
+          <p>AI Learning Support</p>
+        </div>
+
+        <div class="stat">
+          <h3>3</h3>
+          <p>Core Subjects Covered</p>
+        </div>
+
+        <div class="stat">
+          <h3>1000+</h3>
+          <p>Practice Questions</p>
+        </div>
+
+        <div class="stat">
+          <h3>AI</h3>
+          <p>Adaptive Study Engine</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta-section">
+
+        <h2>Start Your NEET Success Journey Today</h2>
+
+        <p>
+          NEET Prime acts as your personal AI mentor — helping you study smarter, revise better, and score higher.
+        </p>
+
+        <a href="https://neetprep.learnatopia.com" class="btn btn-primary">
+          Launch NEET Prime
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 NEET Prime • AI-Powered NEET-UG Preparation Platform
+  </footer>
+
+</body>
+</html>
