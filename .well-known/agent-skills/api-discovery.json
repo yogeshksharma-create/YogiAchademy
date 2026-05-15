@@ -1,0 +1,7 @@
+{
+  "name": "learnatopia-api-discovery",
+  "type": "service-discovery",
+  "description": "Provides information about Learnatopia discovery endpoints, API catalog, and documentation.",
+  "version": "1.0.0",
+  "documentation": "https://learnatopia.com/.well-known/agent-skills/api-discovery.json"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agentskills.io/schemas/agent-skills-index-v0.2.json",
+  "skills": [
+    {
+      "name": "learnatopia-homepage",
+      "type": "website-info",
+      "description": "Provides Learnatopia homepage content and navigation links.",
+      "url": "https://learnatopia.com/.well-known/agent-skills/homepage.json",
+      "sha256": "c8bd78d8269248ad9e704ec124e89c946098bc80cfb45f753695fd8995282240"
+    },
+    {
+      "name": "learnatopia-api-discovery",
+      "type": "service-discovery",
+      "description": "Describes Learnatopia discovery endpoints and agent-facing documentation.",
+      "url": "https://learnatopia.com/.well-known/agent-skills/api-discovery.json",
+      "sha256": "805aef86d03e645a262f79fb005c25b73c44cb8c6974b944fb60ae09ebfc5152"
+    }
+  ]
+}

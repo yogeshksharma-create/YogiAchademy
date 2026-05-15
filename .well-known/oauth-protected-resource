@@ -1,0 +1,5 @@
+{
+  "resource_id": "https://learnatopia.com",
+  "authorization_servers": ["https://learnatopia.com"],
+  "scopes_supported": ["read:site", "write:site"]
+}

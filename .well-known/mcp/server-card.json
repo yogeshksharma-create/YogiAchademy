@@ -1,0 +1,15 @@
+{
+  "serverInfo": {
+    "name": "Learnatopia Agent Bridge",
+    "version": "1.0.0"
+  },
+  "transport": {
+    "type": "websocket",
+    "endpoint": "wss://learnatopia.com/mcp"
+  },
+  "capabilities": [
+    "site-navigation",
+    "context-provision",
+    "tool-invocation"
+  ]
+}

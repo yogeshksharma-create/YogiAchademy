@@ -1,0 +1,9 @@
+{
+  "issuer": "https://learnatopia.com",
+  "authorization_endpoint": "https://learnatopia.com/oauth/authorize",
+  "token_endpoint": "https://learnatopia.com/oauth/token",
+  "jwks_uri": "https://learnatopia.com/.well-known/jwks.json",
+  "scopes_supported": ["read:site", "write:site"],
+  "grant_types_supported": ["authorization_code", "client_credentials", "refresh_token"],
+  "token_endpoint_auth_methods_supported": ["client_secret_basic"]
+}

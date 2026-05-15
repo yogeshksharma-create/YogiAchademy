@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "kid": "learnatopia-key-1",
+      "use": "sig",
+      "alg": "RS256",
+      "n": "sXchsaE8L4I2TcdQ7_3nYuErYzO4zZuWsdZQfB7iX8aB2GN3kV45Uq6GLpV5sJzN8v34bg1NqOqqlFZL9S1q5f3YUZVjM4y_8vU-0qM6pBWFCpGxV8wM1w5JxXNiRWrB5fwxvWR3P0rzNQ4Jgq3Ik2KG7Xl4-XZdR8mEhQBLL3TqDVSZ7cWfQ",
+      "e": "AQAB"
+    }
+  ]
+}

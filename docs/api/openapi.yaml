@@ -1,0 +1,23 @@
+openapi: 3.0.3
+info:
+  title: Learnatopia Website API
+  version: 1.0.0
+  description: Minimal OpenAPI specification for Learnatopia site discovery resources.
+servers:
+  - url: https://learnatopia.com
+paths:
+  /api/health.json:
+    get:
+      summary: Retrieve the health status of Learnatopia.
+      responses:
+        '200':
+          description: Service is healthy.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                required:
+                  - status

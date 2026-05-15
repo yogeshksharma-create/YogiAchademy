@@ -1,0 +1,7 @@
+{
+  "name": "learnatopia-homepage",
+  "type": "information",
+  "description": "Provides Learnatopia homepage content and navigation links for agents.",
+  "version": "1.0.0",
+  "documentation": "https://learnatopia.com/.well-known/agent-skills/homepage.json"
+}

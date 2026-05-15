@@ -1,0 +1,42 @@
+/
+  Link: </.well-known/api-catalog>; rel="api-catalog"
+  Link: </docs/api/index.html>; rel="service-doc"
+  Link: </.well-known/openid-configuration>; rel="openid-configuration"
+  Link: </.well-known/oauth-authorization-server>; rel="oauth-authorization-server"
+  Link: </.well-known/oauth-protected-resource>; rel="oauth-protected-resource"
+  Link: </.well-known/mcp/server-card.json>; rel="mcp-server-card"
+  Link: </.well-known/agent-skills/index.json>; rel="agent-skills"
+  Link: </index.md>; rel="alternate"; type="text/markdown"
+/index.html
+  Link: </.well-known/api-catalog>; rel="api-catalog"
+  Link: </docs/api/index.html>; rel="service-doc"
+  Link: </.well-known/openid-configuration>; rel="openid-configuration"
+  Link: </.well-known/oauth-authorization-server>; rel="oauth-authorization-server"
+  Link: </.well-known/oauth-protected-resource>; rel="oauth-protected-resource"
+  Link: </.well-known/mcp/server-card.json>; rel="mcp-server-card"
+  Link: </.well-known/agent-skills/index.json>; rel="agent-skills"
+  Link: </index.md>; rel="alternate"; type="text/markdown"
+
+/.well-known/api-catalog
+  Content-Type: application/linkset+json
+
+/.well-known/agent-skills/index.json
+  Content-Type: application/json
+
+/.well-known/mcp/server-card.json
+  Content-Type: application/json
+
+/.well-known/openid-configuration
+  Content-Type: application/json
+
+/.well-known/oauth-authorization-server
+  Content-Type: application/json
+
+/.well-known/oauth-protected-resource
+  Content-Type: application/json
+
+/.well-known/jwks.json
+  Content-Type: application/jwk-set+json
+
+/index.md
+  Content-Type: text/markdown

@@ -13,6 +13,14 @@
   <link rel="icon" href="BrainQuest1_logo.png" type="image/png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="api-catalog" href="/.well-known/api-catalog">
+  <link rel="service-doc" href="/docs/api/index.html" type="text/html">
+  <link rel="openid-configuration" href="/.well-known/openid-configuration">
+  <link rel="oauth-authorization-server" href="/.well-known/oauth-authorization-server">
+  <link rel="oauth-protected-resource" href="/.well-known/oauth-protected-resource">
+  <link rel="mcp-server-card" href="/.well-known/mcp/server-card.json">
+  <link rel="agent-skills" href="/.well-known/agent-skills/index.json">
+  <link rel="alternate" type="text/markdown" href="/index.md">
 
   <style>
     body {
@@ -310,6 +318,62 @@
       });
     });
   });
+
+  function registerWebMCPTools() {
+    if (!window.navigator?.modelContext?.provideContext) {
+      return;
+    }
+
+    navigator.modelContext.provideContext({
+      tools: [
+        {
+          name: 'navigateLearnatopia',
+          description: 'Open key Learnatopia pages such as USMLE, NEET, About, and Contact.',
+          inputSchema: {
+            type: 'object',
+            properties: {
+              section: {
+                type: 'string',
+                enum: ['about', 'contact', 'usmle', 'neet', 'kids', 'company']
+              }
+            },
+            required: ['section']
+          },
+          execute: ({ section }) => {
+            const targets = {
+              about: '/about.html',
+              contact: '/contact.html',
+              usmle: '/usmle.html',
+              neet: '/neet.html',
+              kids: 'https://kids.learnatopia.com',
+              company: 'https://ysharmamdinc.learnatopia.com'
+            };
+            const href = targets[section];
+            if (href) {
+              window.location.href = href;
+              return { success: true, url: href };
+            }
+            return { success: false, error: 'Unknown section' };
+          }
+        },
+        {
+          name: 'listLearnatopiaLinks',
+          description: 'Return the main Learnatopia page and service discovery links for agents.',
+          inputSchema: { type: 'object', properties: {}, additionalProperties: false },
+          execute: () => ({
+            urls: {
+              homepage: 'https://learnatopia.com',
+              apiCatalog: 'https://learnatopia.com/.well-known/api-catalog',
+              agentSkills: 'https://learnatopia.com/.well-known/agent-skills/index.json',
+              openidConfiguration: 'https://learnatopia.com/.well-known/openid-configuration'
+            }
+          })
+        }
+      ]
+    });
+  }
+
+  registerWebMCPTools();
 </script>
 
 </body>
