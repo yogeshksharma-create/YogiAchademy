@@ -244,14 +244,14 @@
 
     <div class="card active" onclick="goTo('neet')">
       <i class="fas fa-graduation-cap"></i>
-      <h3>NEET-Prep</h3>
+      <h3>NEET-Prime</h3>
       <p style="color:#10b981; font-weight:600;">Available</p>
     </div>
 
-    <div class="card coming" onclick="comingSoon()">
-      <i class="fas fa-brain"></i>
-      <h3>GRE</h3>
-      <p>Coming Soon</p>
+ <div class="card active" onclick="goTo('iit')">
+      <i class="fas fa-graduation-cap"></i>
+      <h3>IIT-JEE Prime</h3>
+      <p style="color:#10b981; font-weight:600;">Available</p>
     </div>
 
     <div class="card coming" onclick="comingSoon()">
@@ -298,6 +298,9 @@
     }
     else if (type === "company") {
       window.location.href = "https://ysharmamdinc.learnatopia.com";
+    }
+     else if (type === "iit") {
+      window.location.href = "/iitjee.html";
     }
   }
 
