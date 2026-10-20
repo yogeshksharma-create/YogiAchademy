@@ -54,12 +54,15 @@
             display: flex;
             flex-direction: column;
         }
-        input, textarea {
+        input, textarea, select {
             margin-bottom: 15px;
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 6px;
             font-size: 14px;
+        }
+        label {
+            margin-bottom: 6px;
         }
         button {
             padding: 12px;
@@ -107,6 +110,16 @@
 <form action="https://formspree.io/f/xwvabenp" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
+    <label for="product">Which product are you contacting us about?</label>
+    <select id="product" name="product" required>
+        <option value="" selected disabled>Select a product</option>
+        <option value="NEET Prime web">NEET Prime web</option>
+        <option value="IIT-JEE prime web">IIT-JEE prime web</option>
+        <option value="KIds Learnatopia web">KIds Learnatopia web</option>
+        <option value="USMLE Prime web">USMLE Prime web</option>
+        <option value="MCAT Prime web">MCAT Prime web</option>
+    </select>
+    <input type="hidden" name="_subject" value="Contact request">
     <textarea name="message" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
 </form>
@@ -119,6 +132,14 @@
 <footer>
     © 2026 Learnatopia. All rights reserved.
 </footer>
+
+<script>
+    const contactForm = document.querySelector('form');
+    contactForm.addEventListener('submit', () => {
+        const product = contactForm.elements.product.value;
+        contactForm.elements._subject.value = `Contact request: ${product}`;
+    });
+</script>
 
 </body>
 </html>
